@@ -347,3 +347,99 @@ footer {
 .booking-container .cta-btn:hover {
   background: #e6c300;
 }
+
+/* ====================== FLIGHT SECTION ====================== */
+.flight-section {
+  background: #e6f2ff;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.flight-container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.flight-container h1 {
+  color: #001f4d;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.flight-container p {
+  color: #004080;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.flight-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  background: #004080;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tab-btn.active {
+  background: #ffd600;
+  color: #001f4d;
+}
+
+.flight-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.flight-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.flight-card h3 {
+  color: #004080;
+  margin-bottom: 8px;
+}
+
+.flight-card p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.flight-card .fare-type {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.flight-card button {
+  margin-top: 10px;
+  width: 100%;
+  background: #ffd600;
+  color: #001f4d;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flight-card button:hover {
+  background: #e6c300;
+}
+
