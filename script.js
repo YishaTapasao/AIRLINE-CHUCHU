@@ -1,4 +1,3 @@
-// ✅ Navbar active link
 const currentPage = window.location.pathname.split("/").pop();
 const navLinks = document.querySelectorAll(".navbar a");
 navLinks.forEach(link => {
@@ -7,7 +6,6 @@ navLinks.forEach(link => {
   }
 });
 
-// ✅ Search Flight Page → Redirect to booking.html
 const searchFlightForm = document.getElementById('searchFlightForm');
 if (searchFlightForm) {
   searchFlightForm.addEventListener('submit', (e) => {
@@ -16,7 +14,6 @@ if (searchFlightForm) {
   });
 }
 
-// ✅ Show or hide return date based on trip type
 const tripTypeSelect = document.getElementById('tripType');
 const returnGroup = document.getElementById('returnGroup');
 
@@ -31,7 +28,6 @@ if (tripTypeSelect && returnGroup) {
   });
 }
 
-// ✅ Flight booking form logic
 const flightBookingForm = document.getElementById('flightBookingForm');
 if (flightBookingForm) {
   flightBookingForm.addEventListener('submit', (e) => {
@@ -44,20 +40,18 @@ if (flightBookingForm) {
     const tripType = document.getElementById('tripType').value;
     const returnDate = tripType === 'round-trip' ? document.getElementById('return').value : '';
 
-    // Save booking to localStorage
     const booking = { from, to, departure, returnDate, passengers, tripType };
     let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
     bookings.push(booking);
     localStorage.setItem('bookings', JSON.stringify(bookings));
 
-    alert(`✅ Booking Added!\n\nFrom: ${from}\nTo: ${to}\nDeparture: ${departure}\nReturn: ${returnDate || "N/A"}\nPassengers: ${passengers}\nTrip Type: ${tripType === 'round-trip' ? 'Round Trip' : 'One Way'}`);
+    alert(`Booking Added!\n\nFrom: ${from}\nTo: ${to}\nDeparture: ${departure}\nReturn: ${returnDate || "N/A"}\nPassengers: ${passengers}\nTrip Type: ${tripType === 'round-trip' ? 'Round Trip' : 'One Way'}`);
 
     flightBookingForm.reset();
-    returnGroup.style.display = 'none'; // hide again after submission
+    returnGroup.style.display = 'none';
   });
 }
 
-// ✅ Display Bookings on mybookings.html
 const bookingsList = document.getElementById('bookingsList');
 if (bookingsList) {
   const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
@@ -80,7 +74,6 @@ if (bookingsList) {
       bookingsList.appendChild(div);
     });
 
-    // Delete booking button
     document.querySelectorAll('.deleteBooking').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const index = e.target.getAttribute('data-index');
@@ -160,4 +153,3 @@ function showFlights(type, departDate, returnDate) {
     flightList.appendChild(card);
   });
 }
-

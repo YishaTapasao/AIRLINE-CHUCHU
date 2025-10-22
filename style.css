@@ -10,7 +10,6 @@ body {
   color: #333;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -31,7 +30,6 @@ body {
   margin-right: 10px;
 }
 
-/* ✅ Move the menu to the right */
 .menu {
   margin-left: auto;
   display: flex;
@@ -80,7 +78,6 @@ body {
   background: #e6c300;
 }
 
-/* Hero Section */
 .hero {
   background: url("pic/american-airlines-flapping-feature.webp") no-repeat center center/cover;
   height: 80vh;
@@ -112,7 +109,6 @@ body {
   background: #e6c300;
 }
 
-/* Info Bar */
 .info-bar {
   display: flex;
   justify-content: center;
@@ -140,7 +136,6 @@ body {
   color: #004080;
 }
 
-/* Destinations */
 .events-title {
   display: flex;
   align-items: center;
@@ -203,7 +198,6 @@ body {
   padding: 10px;
 }
 
-/* Footer */
 footer {
   background: #001f4d;
   color: white;
@@ -282,7 +276,6 @@ footer {
   text-decoration: underline;
 }
 
-/* Booking Page */
 .booking-section {
   background: url("pic/american-airlines-flapping-feature.webp") no-repeat center center/cover;
   min-height: 100vh;
@@ -348,7 +341,6 @@ footer {
   background: #e6c300;
 }
 
-/* ====================== FLIGHT SECTION ====================== */
 .flight-section {
   background: #e6f2ff;
   min-height: 100vh;
@@ -442,4 +434,3 @@ footer {
 .flight-card button:hover {
   background: #e6c300;
 }
-
